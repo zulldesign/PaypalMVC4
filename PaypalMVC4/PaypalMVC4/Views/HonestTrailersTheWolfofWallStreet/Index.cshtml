@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<iframe width="560" height="315" src="//www.youtube.com/embed/3_i_f2W16d0" frameborder="0" allowfullscreen></iframe>
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="The Wolf of Wall Street" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                    RM<input type="text" name="totalPrice" value="14.90" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
